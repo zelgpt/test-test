@@ -518,3 +518,13 @@ img {
   color: var(--muted-color);
 }
 
+/* Blog Image Styling */
+.blog-content img {
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+
