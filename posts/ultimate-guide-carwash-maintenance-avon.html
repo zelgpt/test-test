@@ -57,7 +57,46 @@
   </style>
 </head>
 <body>
-  <article class="blog-post">
+  <!-- HEADER START -->
+  <header class="header">
+    <nav class="nav-container">
+      <div class="logo">
+        <img src="../assets/images/AvonCarWashLogo.jpg" alt="Avon Splash Car Wash Logo">
+        <span class="logo-text">Avon Splash Car Wash</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <!-- HEADER END -->
+
+  <section class="blog-hero">
+    <h1>The Ultimate Guide to Carwash Maintenance in Avon</h1>
+    <p>Keep your car protected through every Indiana season.</p>
+  </section>
+
+  <section class="breadcrumbs">
+    <div class="container">
+      <a href="../index.html">Home</a>
+      <span>></span>
+      <a href="../blog.html">Blog</a>
+      <span>></span>
+      <span>Carwash Maintenance</span>
+    </div>
+  </section>
+
+  <main class="blog-content">
+
     <header>
       <h1>The Ultimate Guide to Carwash Maintenance in Avon</h1>
       <div class="meta">
@@ -113,7 +152,52 @@
       <p>Avon Splash Carwash emphasizes reliability and expertise in every service offered, translating into trustworthy practices that customers can depend upon. By incorporating these recommendations and practices into your car maintenance routine, you ensure not only that your car looks great but that it operates safely and efficiently.</p>
       <p>In conclusion, regular carwash maintenance, adjusted per season, is vital for prolonging your car's life in Avon’s diverse climate. With high authority and local expertise, Avon Splash Carwash remains a trusted partner in this journey. Remember, a well-maintained vehicle is a reliable one, ready to serve you day in and day out, no matter the weather.</p>
       <p><strong>Call to Action:</strong> Ready to give your car the care it deserves? Visit Avon Splash Carwash today for a comprehensive assessment and see the difference professional maintenance can make! Check out our seasonal promotions and protect your car all year round. Your vehicle deserves the very best—give it the splash of excellence at Avon Splash Carwash!</p>
-    </div>
+     </div>
   </article>
+  </main>
+
+  <!-- FOOTER START -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Avon Splash Car Wash</h4>
+        <p>Professional touchless car wash services in Avon, IN. Quality you can trust.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <ul>
+          <li><a href="tel:317-457-4333">(317) 457-4333</a></li>
+          <li><a href="mailto:avonsplashcarwash@yahoo.com">avonsplashcarwash@yahoo.com</a></li>
+          <li>Avon, IN</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Avon Splash Car Wash. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- FOOTER END -->
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    if (hamburger) {
+      hamburger.addEventListener('click', () => navMenu.classList.toggle('active'));
+      document.querySelectorAll('.nav-menu a').forEach(link =>
+        link.addEventListener('click', () => navMenu.classList.remove('active'))
+      );
+    }
+  </script>
+
 </body>
 </html>
