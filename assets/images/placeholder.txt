@@ -1,0 +1,16 @@
+
+Image Assets Needed:
+
+1. hero-bg.jpg - Car wash facility or clean car (hero background)
+2. about-us.jpg - Avon Splash Car Wash facility or team
+3. blog-hero.jpg - Car washing or detailing process
+4. logo.png - Avon Splash Car Wash logo (if available from original site)
+
+Note: These images should be downloaded from https://avonsplashcarwash.weebly.com/ 
+when accessible. Current placeholders are styled with CSS backgrounds.
+
+Recommended image sizes:
+- hero-bg.jpg: 1920x1080px
+- about-us.jpg: 600x400px  
+- blog-hero.jpg: 1200x600px
+- logo.png: 200x100px (transparent background)

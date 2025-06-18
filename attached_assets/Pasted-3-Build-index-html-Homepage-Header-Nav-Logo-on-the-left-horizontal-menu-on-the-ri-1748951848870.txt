@@ -1,0 +1,26 @@
+3. Build `index.html` (Homepage)
+   – **Header & Nav:** Logo on the left; horizontal menu on the right. On mobile, collapse into a hamburger.  
+   – **Hero Section:**  
+     • Full-width background image (original or close substitute) with a semi-dark overlay.  
+     • Centered headline (from [TARGET_URL]) in a bold sans-serif font.  
+     • Sub-headline or tagline below.  
+     • Prominent CTA button or phone link (e.g., `<a href="tel:[PHONE]">Call Now: [PHONE]</a>`), styled with a bold accent color (#0077CC or one drawn from the logo), white text, rounded corners, and a subtle hover shadow.  
+   – **About Section:**  
+     • Two-column layout on desktop (image on one side, text on the other; stack on mobile).  
+     • Heading (“About Us” or whatever the original uses) and a short paragraph (2–3 sentences) from the original.  
+     • Bullet list “Why Choose Us” (copy items from the original or use defaults like “Fast & Friendly Service,” “Eco-Friendly Equipment,” etc.).  
+   – **Services Section:**  
+     • Grid (3 columns on desktop, 1 column on mobile).  
+     • Each service card: icon/image, service name (H3), and 1–2-sentence description (from the original).  
+     • Cards have a white background, light border, gentle rounding, and lift slightly on hover.  
+   – **Testimonials (if present):**  
+     • Light-gray background; centered heading.  
+     • 2–3 testimonial cards with quote text, author name, and star ratings (SVG or Unicode stars).  
+   – **Contact Section:**  
+     • Two-column layout on desktop (stack on mobile).  
+     • Left: heading (“Contact Us”), address, phone (`<a href="tel:…">`), email (`<a href="mailto:…">`).  
+     • Right: a styled but non-functional contact form (Name, Email, Message fields + “Send Message” button).  
+   – **Footer:**  
+     • Dark background, light text.  
+     • Columns for: (1) logo/name + short tagline, (2) quick links (Home, About, Services, Blog, Contact), (3) social icons.  
+     • Bottom line: “© [CURRENT_YEAR] [Business Name]. All rights reserved.”

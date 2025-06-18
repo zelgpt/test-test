@@ -1,0 +1,116 @@
+Create a clean, mobile-responsive two-page website that is an exact copy of the landing page at:
+[TARGET_URL]
+
+Extract the following automatically from [TARGET_URL]:
+• Business Name: (e.g., primary H1 or logo text)
+• Business Type: (e.g., “Car Wash,” “Plumbing Company,” etc.)
+• Location: (e.g., from header, footer, or Contact section)
+
+Folder/File structure:
+/
+├── index.html
+├── blog.html
+└── posts/       # ← empty folder; future blog posts go here
+
+---
+
+1. Build index.html (Homepage)
+
+Match every visible element on [TARGET_URL]—logo, navigation, hero banner, CTAs, typography, colors, images, and layout—so that opening index.html locally is identical to the live site.
+
+A. Header & Navigation
+   – Reproduce the site’s logo (or download it into /assets/ and reference it).
+   – Include all menu links in the same order and with the same link text.
+   – Match nav bar background color, font family/size/weight, spacing, and hover/active states.
+
+B. Hero Banner Section
+   – Use the same background image (save into /assets/) or a visually identical placeholder.
+   – Overlay all headline text exactly as shown.
+   – Include any call-to-action (button or phone link), e.g.:
+     <a href="tel:[PHONE_NUMBER]">[PHONE_NUMBER]</a>
+     Match font size, letter spacing, color, alignment, and any overlay gradient.
+
+C. Additional Sections (as they appear on [TARGET_URL])
+   – “About” or “Our Story”: copy heading and paragraph text verbatim, matching typography and spacing.
+   – Services/Features grid: recreate each label, description, icon/image, and layout exactly.
+   – Testimonials/Trust Signals: copy each quote, reviewer name, star rating, and arrange them as on the live page.
+   – Any buttons (“Learn More,” “Get Started,” etc.): match styles (border-radius, box-shadow, hover states).
+
+D. Contact Section
+   – Copy address, email, phone number exactly. Wrap phone/email in clickable links.
+   – If there’s a contact form, replicate all fields and button styling exactly (even if non-functional).
+   – Reproduce any embedded maps or social icons as they appear.
+
+E. Footer
+   – Replicate footer text exactly (e.g., “© 2025 [Business Name]” or current year).
+   – Copy any social icons/links and match hover colors.
+   – Include any quick-links or secondary navigation in the same order.
+
+---
+
+2. Build blog.html (Blog Index Page)
+
+Use the same header/footer, fonts, and colors as index.html so the site is cohesive.
+
+A. Header & Navigation
+   – Reuse the exact header/navigation markup from index.html. If the Blog link is styled as “active,” replicate that.
+
+B. Main Blog Header
+   <h1>Blog</h1>
+   <p>Latest tips & updates from [BUSINESS_NAME].</p>
+   – If [TARGET_URL]’s blog page has a different title (e.g., “News & Insights”), copy that instead.
+
+C. Post Listing
+   <ol style="list-style: none; padding: 0;">
+     <!-- If no posts exist: -->
+     <li>No posts yet. Check back soon!</li>
+     <!-- For future posts: -->
+     <!--
+     <li>
+       <a href="posts/[POST_SLUG].html">[Post Title]</a>
+       <span style="color: #666;">([Month Day, Year])</span>
+     </li>
+     -->
+   </ol>
+   – Match font sizes, margins, and link colors as on [TARGET_URL]’s blog.
+
+D. Navigation Links (Inside Blog Page)
+   – Provide links back to index.html (Home) and to blog.html itself, matching the live site’s style.
+
+E. Footer
+   – Reuse the same footer code from index.html.
+
+---
+
+3. Create /posts/ Folder
+   – Generate an empty directory named posts/ for future blog posts.
+
+---
+
+Design & Technical Requirements
+
+• Fonts: Import and use any Google or custom fonts from [TARGET_URL].  
+• Colors: Use the same HEX/RGB values for backgrounds, text, buttons, and link hovers.  
+• Spacing: Match all margins and padding (e.g., section padding, heading margins, grid gaps) exactly.  
+• Responsiveness: Replicate the same breakpoints and responsive behaviors:
+    – Nav collapse or hamburger menu on mobile
+    – Hero text resizing and stacking
+    – Grid layouts stacking into single-column views
+    – Images resizing and centering  
+• Assets:
+    – Download every image, icon, or logo from [TARGET_URL] into an /assets/ folder. Use relative paths.
+    – If an asset isn’t directly downloadable, extract or recreate it so the local copy is identical.  
+    – If you substitute, use a pixel-for-pixel visually identical placeholder and add a comment:
+      <!-- Placeholder for missing image: original URL=[TARGET_URL]/path/to/image.png -->
+• HTML/CSS Structure:
+    – Use semantic tags: <header>, <nav>, <main>, <section>, <article>, <footer>.
+    – Put all CSS in a separate styles.css file and link it:
+      <link rel="stylesheet" href="styles.css">
+    – Include <meta name="viewport" content="width=device-width, initial-scale=1.0"> in each head.
+    – Do not create any extra pages—only index.html, blog.html, and the posts/ folder.
+    – Do not add, remove, or modify any visible text or sections beyond what’s on [TARGET_URL].
+
+---
+
+Final Deliverable:
+Opening index.html (and blog.html) in a browser should look and behave indistinguishably from the original site at [TARGET_URL], both on desktop and mobile. Just replace every instance of “[TARGET_URL]” with your client’s actual link. ```

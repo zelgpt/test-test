@@ -1,0 +1,637 @@
+– Create an `assets/images/` folder and download any logos or photos from [TARGET_URL] into it.  
+– If any image is not accessible, substitute a high-quality royalty-free placeholder and note it with a comment.  
+
+3. Build `index.html` (Homepage)
+– **Structure & Content**:  
+  1. `<header>`  
+     • Modern logo (PNG or SVG from assets/images/) positioned top-left.  
+     • Horizontal navigation menu on the right: Home, About, Services, Blog, Contact.  
+     • Mobile: collapse into a hamburger icon that toggles a slide-in menu.  
+  2. `<section id="hero">`  
+     • Full–width hero area with a high-contrast background image (use the original if available, otherwise pick a clean, relevant stock photo).  
+     • Overlay a semi-transparent dark gradient so text is legible.  
+     • Centered headline (copy from [TARGET_URL]) in large, bold sans-serif (e.g., Montserrat Black, 3rem on desktop, scaling down on mobile).  
+     • Sub-headline or tagline below in medium weight (e.g., Montserrat Regular, 1.25rem).  
+     • Clear call-to-action button:  
+       ```html
+       <a class="btn-primary" href="tel:[PHONE_NUMBER]">
+         Call Now: [PHONE_NUMBER]
+       </a>
+       ```  
+       • Button style:  
+         – Background: #0077CC (or a fresh accent color drawn from the original logo).  
+         – Text: #FFFFFF, all-caps, letter-spacing: 0.1em, padding: 0.75rem 1.5rem, border-radius: 6px.  
+         – Hover: lighten background by 10%, add a subtle box-shadow.  
+  3. `<section id="about">`  
+     • Two-column layout on desktop; single-column stacked on mobile.  
+     • Left column: an image of the owner or facility (download from [TARGET_URL] or use a placeholder).  
+     • Right column:  
+       – Heading: “About Us” (copy exact text if the original uses a different heading).  
+       – Paragraph (2–3 sentences) from the original “About” section.  
+       – Bullet list titled “Why Choose Us”:  
+         ```html
+         <ul class="why-choose-us">
+           <li>State-of-the-Art Equipment</li>
+           <li>Eco-Friendly Cleaning</li>
+           <li>Fast & Friendly Service</li>
+           <li>Open 7 Days a Week</li>
+         </ul>
+         ```  
+         – Style bullets with custom SVG icons or Font Awesome checkmarks, left-aligned text, spacing: 0.5rem between items.  
+  4. `<section id="services">`  
+     • Grid layout (3 columns on desktop, 1 column on mobile, 2 columns on tablet).  
+     • Each service card:  
+       ```html
+       <div class="service-card">
+         <img src="assets/images/[SERVICE_ICON].png" alt="[Service Name] Icon">
+         <h3>[Service Name]</h3>
+         <p>[1–2 sentence description from original]</p>
+       </div>
+       ```  
+     • Card style:  
+       – Background: #FFFFFF, border: 1px solid #E0E0E0, border-radius: 8px, padding: 1.5rem, text-align: center.  
+       – Image: max-width: 80px; margin: 0 auto 1rem.  
+       – Heading: Montserrat Semibold, 1.25rem.  
+       – Paragraph: Open Sans, 1rem, line-height: 1.6.  
+       – On hover: lift effect with box-shadow (e.g., `box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-4px);`).  
+  5. `<section id="testimonials">` *(optional if original has any)*  
+     • Full-width background: light gray (#F9F9F9) or subtle pattern.  
+     • Centered heading: “What Our Customers Say” (or copy original).  
+     • Carousel or grid with 2-3 testimonials:  
+       ```html
+       <div class="testimonial-card">
+         <p class="quote">“[Exact customer quote from original]”</p>
+         <p class="author">— [Reviewer Name], [Date if given]</p>
+         <div class="stars">
+           <!-- Use SVG star icons: filled for rating-->
+         </div>
+       </div>
+       ```  
+     • Card style:  
+       – Background: #FFFFFF, padding: 1.5rem, border-radius: 8px, margin: 1rem; max-width: 400px.  
+       – Quote: Open Sans Italic, 1rem, color: #333.  
+       – Author: Montserrat Regular, 0.9rem, color: #555.  
+       – Stars: inline SVGs sized 16px (filled vs. empty).  
+  6. `<section id="contact">`  
+     • Split into two columns on desktop (stack on mobile).  
+     • Left: clear heading “Contact Us” and contact details from the original:  
+       ```html
+       <address>
+         <p>[Street Address]</p>
+         <p>[City, State ZIP]</p>
+         <p><a href="tel:[PHONE_NUMBER]">[PHONE_NUMBER]</a></p>
+         <p><a href="mailto:[EMAIL_ADDRESS]">[EMAIL_ADDRESS]</a></p>
+       </address>
+       ```  
+     • Right: styled contact form (even if non-functional):  
+       ```html
+       <form class="contact-form">
+         <input type="text" name="name" placeholder="Your Name" required>
+         <input type="email" name="email" placeholder="Your Email" required>
+         <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+         <button type="submit" class="btn-primary">Send Message</button>
+       </form>
+       ```  
+     • Form style:  
+       – Inputs/textarea: width: 100%, border: 1px solid #CCC, border-radius: 4px, padding: 0.75rem, margin-bottom: 1rem, font: Open Sans, 1rem.  
+       – Button: same styling as hero CTA.  
+  7. `<footer>`  
+     • Background: #222 (or a dark shade drawn from original’s palette), text-color: #EEE.  
+     • Two or three columns on desktop, stacked on mobile:  
+       – Column 1: Business name/logo and short tagline.  
+       – Column 2: Quick Links (Home, About, Services, Blog, Contact).  
+       – Column 3: Social media icons (SVG or Font Awesome) with hover effect (lighten icon color).  
+     • Bottom-centered small text: “© [CURRENT_YEAR] [Business Name]. All rights reserved.” (match original if it includes extra text).  
+     • Ensure sufficient padding: at least 2rem top/bottom, 1rem left/right.  
+
+4. Build `blog.html` (Blog Index Page)
+– **Header & Navigation**: Copy the exact `<header>` and `<nav>` markup from `index.html`, including any “active” styling on the Blog link.  
+– **Main Blog Header**:  
+  ```html
+  <section id="blog-hero">
+    <h1>Blog</h1>
+    <p>Latest tips & updates from [Business Name].</p>
+  </section>
+  ```  
+  • Match hero background (if the live blog has a different hero image/color) or use a simpler full-width background color (#F5F5F5).  
+  • Heading font: Montserrat Bold, 2.5rem; subtext: Open Sans, 1.25rem.  
+
+– **Post Listing**:  
+  ```html
+  <section id="posts">
+    <ol class="post-list" style="list-style: none; padding: 0;">
+      <!-- If no posts exist: -->
+      <li>No posts yet. Check back soon!</li>
+      <!-- For future posts: -->
+      <!--
+      <li class="post-item">
+        <a href="posts/[POST_SLUG].html" class="post-link">[Post Title]</a>
+        <span class="post-date">([Month Day, Year])</span>
+      </li>
+      -->
+    </ol>
+  </section>
+  ```  
+  • `.post-list` style: max-width: 800px; margin: 0 auto; padding: 2rem;  
+  • Each `.post-item`: margin-bottom: 1.5rem;  
+  • `.post-link`: font: Montserrat Semibold, 1.25rem; color: #0077CC; hover: underline.  
+  • `.post-date`: font: Open Sans, 0.9rem; color: #666; margin-left: 0.5rem.  
+
+– **Navigation (Inside Blog)**:  
+  • Below the blog header or above the post list (wherever [TARGET_URL] places it), include breadcrumbs or secondary nav:  
+    ```html
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> &gt; <span>Blog</span>
+    </nav>
+    ```  
+  • Style `.breadcrumb` links: Open Sans, 0.9rem, color: #555; hover: color: #0077CC.  
+
+– **Footer**: Reuse the exact `<footer>` from `index.html` (same columns, colors, and spacing).
+
+5. Create `/posts/` Folder
+– Generate an empty directory named `posts/` for future blog post files.
+
+6. Design & Technical Requirements
+– **Fonts**:  
+  • In `<head>` of each HTML:  
+    ```html
+    <link href="https://fonts.googleapis.com/css2?
+      family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;600&amp;display=swap"
+      rel="stylesheet">
+    ```  
+  • Use Montserrat for all headings (H1–H6) and navigation; use Open Sans for paragraphs, form inputs, and body text.  
+
+– **Colors & Variables** (define in `styles.css` at top):  
+  ```css
+  :root {
+    --color-primary: #0077CC;         /* Accent color */
+    --color-secondary: #222222;       /* Dark text or footer background */
+    --color-bg-light: #F9F9F9;        /* Light background */
+    --color-text: #333333;            /* Main body text */
+    --color-muted: #666666;           /* Subtext (dates, small text) */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+  }
+  ```  
+
+– **Global Reset & Base Styles**:  
+  ```css
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;    /* 1rem = 16px */
+  }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a {
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  button, .btn-primary {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+  ```  
+
+– **Header & Nav Styles**:  
+  ```css
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    z-index: 100;
+  }
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  .logo img {
+    max-height: 50px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav a {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-secondary);
+    padding: 0.5rem;
+    transition: color 0.2s ease;
+  }
+  nav a:hover, nav a.active {
+    color: var(--color-primary);
+  }
+  /* Mobile Toggle */
+  .mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block;
+    }
+    nav ul {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #FFFFFF;
+      flex-direction: column;
+      width: 200px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    nav ul.open {
+      transform: translateX(0);
+    }
+    nav li {
+      margin: 1rem 0;
+    }
+  }
+  ```  
+
+– **Hero Section Styles**:  
+  ```css
+  #hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+  }
+  #hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);  /* semi-transparent overlay */
+    z-index: 0;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+  .hero-content h1 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+  }
+  .hero-content p {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary:hover {
+    background-color: #3399E6;  /* 10% lighter accent */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.25rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+    }
+  }
+  ```  
+
+– **About Section Styles**:  
+  ```css
+  #about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    background-color: var(--color-bg-light);
+  }
+  #about .about-image {
+    flex: 1;
+  }
+  #about .about-text {
+    flex: 1;
+  }
+  #about h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  #about p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  .why-choose-us {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .why-choose-us li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    color: var(--color-text);
+  }
+  .why-choose-us li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-primary);
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    #about {
+      flex-direction: column;
+    }
+  }
+  ```  
+
+– **Services Section Styles**:  
+  ```css
+  #services {
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+    text-align: center;
+  }
+  #services h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .service-card {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .service-card img {
+    max-width: 80px;
+    margin: 0 auto 1rem;
+  }
+  .service-card h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  .service-card p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-muted);
+  }
+  ```  
+
+– **Testimonials Section Styles** (if used):  
+  ```css
+  #testimonials {
+    padding: 4rem 2rem;
+    background-color: var(--color-bg-light);
+    text-align: center;
+  }
+  #testimonials h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .testimonial-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .testimonial-card .quote {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+  }
+  .testimonial-card .author {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    margin-bottom: 0.5rem;
+  }
+  .testimonial-card .stars {
+    display: flex;
+    gap: 0.25rem;
+  }
+  .testimonial-card .stars svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--color-primary);
+  }
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  ```  
+
+– **Contact Section Styles**:  
+  ```css
+  #contact {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 2rem;
+    gap: 2rem;
+    background-color: #FFFFFF;
+  }
+  #contact .contact-info, #contact .contact-form {
+    flex: 1;
+    max-width: 500px;
+  }
+  #contact h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  #contact address {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin-bottom: 2rem;
+  }
+  #contact address a {
+    color: var(--color-primary);
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .contact-form textarea {
+    resize: vertical;
+  }
+  .contact-form .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    #contact {
+      flex-direction: column;
+    }
+  }
+  ```  
+
+– **Footer Styles**:  
+  ```css
+  footer {
+    background-color: var(--color-secondary);
+    color: #EEEEEE;
+    padding: 2rem 2rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+  }
+  .footer-column h3 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+  }
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+  .footer-column ul li a {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #CCCCCC;
+    transition: color 0.2s ease;
+  }
+  .footer-column ul li a:hover {
+    color: #FFFFFF;
+  }
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  .social-icons a svg {
+    width: 24px;
+    height: 24px;
+    fill: #CCCCCC;
+    transition: fill 0.2s ease;
+  }
+  .social-icons a:hover svg {
+    fill: #FFFFFF;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #AAAAAA;
+    margin-top: 2rem;
+  }
+  ```  
+
+7. Responsive Breakpoints
+– **Desktop**: min-width: 1024px (full multi-column layouts).  
+– **Tablet**: max-width: 1023px (two-column gracefully collapse to one or two as needed).  
+– **Mobile**: max-width: 767px (single-column stacking, larger touch targets, increased line-height).  
+
+8. Final Deliverable
+– Once you replace `[TARGET_URL]` with any real URL, open that site in a browser and extract all content (text, images, links).  
+– Create `index.html`, `blog.html`, and the empty `posts/` folder.  
+– Download assets into `assets/images/` (logo, background images, icons).  
+– Copy/paste each heading, paragraph, service description, testimonial, and footer text from the original site.  
+– Use `styles.css` and the CSS guidelines above to restyle every section with a modern, sleek look.  
+– Test at multiple viewports (desktop, tablet, mobile) and ensure the site reflows cleanly.  
+
+When you finish, opening `index.html` (and `blog.html`) in a browser should display the same content as the original site at [TARGET_URL], but with a completely refreshed, clean, and modern design that feels polished on both desktop and mobile. ```

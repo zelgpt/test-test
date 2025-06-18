@@ -1,0 +1,47 @@
+3. Build `index.html` (Homepage)
+– **Structure & Content**:  
+  1. `<header>`  
+     • Modern logo (PNG or SVG from assets/images/) positioned top-left.  
+     • Horizontal navigation menu on the right: Home, About, Services, Blog, Contact.  
+     • Mobile: collapse into a hamburger icon that toggles a slide-in menu.  
+  2. `<section id="hero">`  
+     • Full–width hero area with a high-contrast background image (use the original if available, otherwise pick a clean, relevant stock photo).  
+     • Overlay a semi-transparent dark gradient so text is legible.  
+     • Centered headline (copy from [TARGET_URL]) in large, bold sans-serif (e.g., Montserrat Black, 3rem on desktop, scaling down on mobile).  
+     • Sub-headline or tagline below in medium weight (e.g., Montserrat Regular, 1.25rem).  
+     • Clear call-to-action button:  
+       ```html
+       <a class="btn-primary" href="tel:[PHONE_NUMBER]">
+         Call Now: [PHONE_NUMBER]
+       </a>
+       ```  
+       • Button style:  
+         – Background: #0077CC (or a fresh accent color drawn from the original logo).  
+         – Text: #FFFFFF, all-caps, letter-spacing: 0.1em, padding: 0.75rem 1.5rem, border-radius: 6px.  
+         – Hover: lighten background by 10%, add a subtle box-shadow.  
+  3. `<section id="about">`  
+     • Two-column layout on desktop; single-column stacked on mobile.  
+     • Left column: an image of the owner or facility (download from [TARGET_URL] or use a placeholder).  
+     • Right column:  
+       – Heading: “About Us” (copy exact text if the original uses a different heading).  
+       – Paragraph (2–3 sentences) from the original “About” section.  
+       – Bullet list titled “Why Choose Us”:  
+         ```html
+         <ul class="why-choose-us">
+           <li>State-of-the-Art Equipment</li>
+           <li>Eco-Friendly Cleaning</li>
+           <li>Fast & Friendly Service</li>
+           <li>Open 7 Days a Week</li>
+         </ul>
+         ```  
+         – Style bullets with custom SVG icons or Font Awesome checkmarks, left-aligned text, spacing: 0.5rem between items.  
+  4. `<section id="services">`  
+     • Grid layout (3 columns on desktop, 1 column on mobile, 2 columns on tablet).  
+     • Each service card:  
+       ```html
+       <div class="service-card">
+         <img src="assets/images/[SERVICE_ICON].png" alt="[Service Name] Icon">
+         <h3>[Service Name]</h3>
+         <p>[1–2 sentence description from original]</p>
+       </div>
+       ```  

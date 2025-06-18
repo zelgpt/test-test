@@ -1,0 +1,97 @@
+– Create an `assets/images/` folder and download any logos or photos from [TARGET_URL] into it.  
+– If any image is not accessible, substitute a high-quality royalty-free placeholder and note it with a comment.  
+
+3. Build `index.html` (Homepage)
+– **Structure & Content**:  
+  1. `<header>`  
+     • Modern logo (PNG or SVG from assets/images/) positioned top-left.  
+     • Horizontal navigation menu on the right: Home, About, Services, Blog, Contact.  
+     • Mobile: collapse into a hamburger icon that toggles a slide-in menu.  
+  2. `<section id="hero">`  
+     • Full–width hero area with a high-contrast background image (use the original if available, otherwise pick a clean, relevant stock photo).  
+     • Overlay a semi-transparent dark gradient so text is legible.  
+     • Centered headline (copy from [TARGET_URL]) in large, bold sans-serif (e.g., Montserrat Black, 3rem on desktop, scaling down on mobile).  
+     • Sub-headline or tagline below in medium weight (e.g., Montserrat Regular, 1.25rem).  
+     • Clear call-to-action button:  
+       ```html
+       <a class="btn-primary" href="tel:[PHONE_NUMBER]">
+         Call Now: [PHONE_NUMBER]
+       </a>
+       ```  
+       • Button style:  
+         – Background: #0077CC (or a fresh accent color drawn from the original logo).  
+         – Text: #FFFFFF, all-caps, letter-spacing: 0.1em, padding: 0.75rem 1.5rem, border-radius: 6px.  
+         – Hover: lighten background by 10%, add a subtle box-shadow.  
+  3. `<section id="about">`  
+     • Two-column layout on desktop; single-column stacked on mobile.  
+     • Left column: an image of the owner or facility (download from [TARGET_URL] or use a placeholder).  
+     • Right column:  
+       – Heading: “About Us” (copy exact text if the original uses a different heading).  
+       – Paragraph (2–3 sentences) from the original “About” section.  
+       – Bullet list titled “Why Choose Us”:  
+         ```html
+         <ul class="why-choose-us">
+           <li>State-of-the-Art Equipment</li>
+           <li>Eco-Friendly Cleaning</li>
+           <li>Fast & Friendly Service</li>
+           <li>Open 7 Days a Week</li>
+         </ul>
+         ```  
+         – Style bullets with custom SVG icons or Font Awesome checkmarks, left-aligned text, spacing: 0.5rem between items.  
+  4. `<section id="services">`  
+     • Grid layout (3 columns on desktop, 1 column on mobile, 2 columns on tablet).  
+     • Each service card:  
+       ```html
+       <div class="service-card">
+         <img src="assets/images/[SERVICE_ICON].png" alt="[Service Name] Icon">
+         <h3>[Service Name]</h3>
+         <p>[1–2 sentence description from original]</p>
+       </div>
+       ```  
+     • Card style:  
+       – Background: #FFFFFF, border: 1px solid #E0E0E0, border-radius: 8px, padding: 1.5rem, text-align: center.  
+       – Image: max-width: 80px; margin: 0 auto 1rem.  
+       – Heading: Montserrat Semibold, 1.25rem.  
+       – Paragraph: Open Sans, 1rem, line-height: 1.6.  
+       – On hover: lift effect with box-shadow (e.g., `box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-4px);`).  
+  5. `<section id="testimonials">` *(optional if original has any)*  
+     • Full-width background: light gray (#F9F9F9) or subtle pattern.  
+     • Centered heading: “What Our Customers Say” (or copy original).  
+     • Carousel or grid with 2-3 testimonials:  
+       ```html
+       <div class="testimonial-card">
+         <p class="quote">“[Exact customer quote from original]”</p>
+         <p class="author">— [Reviewer Name], [Date if given]</p>
+         <div class="stars">
+           <!-- Use SVG star icons: filled for rating-->
+         </div>
+       </div>
+       ```  
+     • Card style:  
+       – Background: #FFFFFF, padding: 1.5rem, border-radius: 8px, margin: 1rem; max-width: 400px.  
+       – Quote: Open Sans Italic, 1rem, color: #333.  
+       – Author: Montserrat Regular, 0.9rem, color: #555.  
+       – Stars: inline SVGs sized 16px (filled vs. empty).  
+  6. `<section id="contact">`  
+     • Split into two columns on desktop (stack on mobile).  
+     • Left: clear heading “Contact Us” and contact details from the original:  
+       ```html
+       <address>
+         <p>[Street Address]</p>
+         <p>[City, State ZIP]</p>
+         <p><a href="tel:[PHONE_NUMBER]">[PHONE_NUMBER]</a></p>
+         <p><a href="mailto:[EMAIL_ADDRESS]">[EMAIL_ADDRESS]</a></p>
+       </address>
+       ```  
+     • Right: styled contact form (even if non-functional):  
+       ```html
+       <form class="contact-form">
+         <input type="text" name="name" placeholder="Your Name" required>
+         <input type="email" name="email" placeholder="Your Email" required>
+         <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+         <button type="submit" class="btn-primary">Send Message</button>
+       </form>
+       ```  
+     • Form style:  
+       – Inputs/textarea: width: 100%, border: 1px solid #CCC, border-radius: 4px, padding: 0.75rem, margin-bottom: 1rem, font: Open Sans, 1rem.  
+       – Button: same styling as hero CTA.  

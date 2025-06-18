@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Avon Splash Car Wash</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(rgba(0,119,204,0.8), rgba(0,119,204,0.8)), url('assets/images/blog-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .blog-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumbs {
+            background: var(--bg-light);
+            padding: 1rem 2rem;
+        }
+        
+        .breadcrumbs .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumbs a {
+            color: var(--muted-color);
+            margin-right: 0.5rem;
+        }
+        
+        .breadcrumbs a:hover {
+            color: var(--primary-color);
+        }
+        
+        .breadcrumbs span {
+            color: var(--text-color);
+            margin: 0 0.5rem;
+        }
+        
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .post-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .post-list li {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .post-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .post-list a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            transition: color 0.2s;
+        }
+        
+        .post-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .post-date {
+            color: var(--muted-color);
+            margin-left: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .no-posts {
+            text-align: center;
+            color: var(--muted-color);
+            font-style: italic;
+            padding: 3rem 0;
+        }
+        
+        .nav-menu a[href="blog.html"] {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="assets/images/AvonCarWashLogo.jpg" alt="Avon Splash Car Wash Logo">
+                <span class="logo-text">Avon Splash Car Wash</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <h1>Blog</h1>
+        <p>Latest tips & updates from Avon Splash Car Wash</p>
+    </section>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>></span>
+            <span>Blog</span>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+<!-- inside blog.html: -->
+                <ol class="post-list">
+                  <li>
+                    <a href="posts/regular-car-washes-avon-protect-investment.html">
+                      Why Regular Car Washes in Avon Protect Your Investment
+                    </a>
+                    <span class="post-date">(June 5, 2025)</span>
+                  </li>
+                  <li>
+                    <a href="posts/regular-car-washing-avon-vehicle-longevity.html">
+                      Why Regular Car Washing in Avon Matters for Your Vehicle’s Longevity
+                    </a>
+                    <span class="post-date">(June 5, 2025)</span>
+                  </li>
+                  <li>
+                    <a href="posts/ultimate-guide-carwash-maintenance-avon.html">
+                      The Ultimate Guide to Carwash Maintenance in Avon
+                    </a>
+                    <span class="post-date">(June 10, 2025)</span>
+                  </li>
+                  <!-- etc… -->
+                </ol>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Avon Splash Car Wash</h4>
+                <p>Professional touchless car wash services in Avon, IN. Quality you can trust.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><a href="tel:317-457-4333">(317) 457-4333</a></li>
+                    <li><a href="mailto:avonsplashcarwash@yahoo.com">avonsplashcarwash@yahoo.com</a></li>
+                    <li>Avon, IN</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Avon Splash Car Wash. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
