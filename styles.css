@@ -432,7 +432,7 @@ img {
 .blog-content .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 1.5rem; /* ← This adds left/right spacing */
+  padding: 0 5%; /* ← This adds left/right spacing */
 }
 
 .blog-content p {
